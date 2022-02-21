@@ -1,6 +1,7 @@
 import { render } from "react-dom"
 import App from './App'
-import './index.css'
+import './css/normalize.css'
+import './css/index.css'
 import reportWebVitals from './reportWebVitals'
 
 render(
