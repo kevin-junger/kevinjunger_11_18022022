@@ -6,9 +6,7 @@ export default function Home() {
       <section className="home__hero">
         <h1>Chez vous, partout et ailleurs</h1>
       </section>
-      <section className="home__rentals">
-        <Rentals />
-      </section>
+      <Rentals />
     </main>
   )
 }
