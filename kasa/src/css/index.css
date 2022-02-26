@@ -77,3 +77,15 @@
   padding: 0.35rem;
   text-align: center;
 }
+.footer {
+  background-color: black;
+  padding: 3rem;
+}
+.footer p {
+  color: white;
+  text-align: center;
+}
+.footer__logo {
+  width: 100px;
+  margin: 0 auto;
+}

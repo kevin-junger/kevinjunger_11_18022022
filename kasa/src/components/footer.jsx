@@ -1,4 +1,4 @@
-import logo from "../assets/kasa_logo.png"
+import logo from "../assets/kasa_logo_white.png"
 
 export default function Footer() {
   return (
