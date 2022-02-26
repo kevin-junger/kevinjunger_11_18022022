@@ -10,14 +10,7 @@ import About from "./containers/about"
 import Rental from "./containers/rental"
 import NotFound from "./containers/notFound"
 
-//test import données
-import Data from "./data/data"
-
 export default function App() {
-
-  //test
-  console.log(Data)
-  
   return (
     <Fragment>
       <Header />
