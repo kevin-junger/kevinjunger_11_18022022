@@ -15,7 +15,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "sass": "sass --watch ./src/sass/main.scss:./src/sass/index.css",
+    "prefix": "postcss ./src/sass/index.css --use autoprefixer -d ./src/css/"
   },
   "eslintConfig": {
     "extends": [
@@ -36,6 +38,10 @@
     ]
   },
   "devDependencies": {
-    "react-router-dom": "^6.2.1"
+    "autoprefixer": "^10.4.2",
+    "postcss": "^8.4.7",
+    "postcss-cli": "^9.1.0",
+    "react-router-dom": "^6.2.1",
+    "sass": "^1.49.9"
   }
 }
