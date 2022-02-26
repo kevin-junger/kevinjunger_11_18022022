@@ -77,15 +77,31 @@
   padding: 0.35rem;
   text-align: center;
 }
+.rental details summary {
+  background-color: #ff6060;
+  color: white;
+  border-radius: 10px;
+  padding: 0.5rem;
+}
+.rental details summary::marker,
+.rental details summary::-webkit-details-marker {
+  display: none;
+}
+.rental details summary h3 {
+  color: white;
+  font-size: 18px;
+}
 .footer {
   background-color: black;
   padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .footer p {
   color: white;
-  text-align: center;
 }
 .footer__logo {
   width: 100px;
-  margin: 0 auto;
 }
