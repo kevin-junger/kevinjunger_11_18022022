@@ -2,8 +2,13 @@ import RentalCard from "./rentalCard"
 
 export default function Rentals() {
   return(
-    <section className="home__rentals">
-      <RentalCard />
+    <section className="rentals">
+      <div className="rentals__grid">
+        <RentalCard />
+        <RentalCard />
+        <RentalCard />
+        <RentalCard />
+      </div>
     </section>
   )
 }
