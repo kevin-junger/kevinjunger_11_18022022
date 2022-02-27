@@ -1,26 +1,29 @@
+import StarOn from "../assets/starOn"
+import StarOff from "../assets/starOff"
+
 export default function Rental() {
   return(
     <main className="rental">
-      <h2>Loft cozy près du Canal Saint-Martin</h2>
-      <em>Paris, Île-de-France</em>
-      <em>Alexandre Dumas</em>
-      <div style={{
-        width: "64px",
-        height: "64px",
-        borderRadius: "32px",
-        backgroundColor: "grey"
-      }}></div>
-      <ul>
-        <li>Cozy</li>
-        <li>Canal</li>
-        <li>Paris 10</li>
-      </ul>
-      <div>
-        <i className="fa-solid fa-star-sharp"></i>
-        <i className="fa-solid fa-star-sharp"></i>
-        <i className="fa-solid fa-star-sharp"></i>
-        <i className="fa-solid fa-star-sharp"></i>
-        <i className="fa-solid fa-star-sharp"></i>
+      <div className="rental__title">
+        <h2 className="rental__title--name">Loft cozy près du Canal Saint-Martin</h2>
+        <em className="rental__title--location">Paris, Île-de-France</em>
+      </div>
+      <div className="rental__host">
+        <em className="rental__host--name">Alexandre Dumas</em>
+        <div className="rental__host--avatar"></div>
+      </div>
+      <div className="rental__tags">
+        <ul className="rental__tags--list">
+          <li className="rental__tags--tag">Cozy</li>
+          <li className="rental__tags--tag">Canal</li>
+          <li className="rental__tags--tag">Paris 10</li>
+        </ul>
+      </div>
+      <div className="rental__rate">
+        <ul className="rental__rate--stars">
+          <StarOn />
+          <StarOff />
+        </ul>
       </div>
       <details>
         <summary>

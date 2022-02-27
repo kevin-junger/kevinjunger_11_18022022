@@ -1,0 +1,55 @@
+.rental {
+  margin: 1rem;
+  & > * {
+    width: 100%;
+  }
+  &__title {
+    &--name {
+      font-size: 36px;
+    }
+    &--location {
+      font-size: 18px;
+    }
+  }
+  &__host {
+    &--name {
+      font-size: 18px;
+    }
+    &--avatar {
+      width: 64px;
+      height: 64px;
+      border-radius: 32px;
+      background-color: gray;
+    }
+  }
+  &__tags {
+    &--list {
+      margin: 0;
+      display: inline;
+    }
+    &--tag {
+      display: inline-block;
+      width: 115px;
+      background-color: #ff6060;
+      border-radius: 10px;
+      color: white;
+      font-size: 14px;
+      padding: 0.35rem;
+      text-align: center;
+    }
+  }
+}
+.rental details summary {
+  background-color: #ff6060;
+  color: white;
+  border-radius: 10px;
+  padding: 0.5rem;
+}
+.rental details summary::marker,
+.rental details summary::-webkit-details-marker {
+  display: none;
+}
+.rental details summary h3 {
+  color: white;
+  font-size: 18px;
+}
