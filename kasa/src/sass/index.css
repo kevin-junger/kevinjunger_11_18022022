@@ -1,17 +1,43 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
-* {
-  font-family: "Montserrat", sans-serif;
-  color: #ff6060;
-}
-
 .header {
   margin: 1rem;
   display: flex;
   justify-content: space-between;
 }
-
 .header__logo {
   width: 145px;
+}
+.header__links li {
+  display: inline;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+.header__links li:first-child {
+  margin-right: 0.5rem;
+}
+
+.footer {
+  background-color: black;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.footer__logo {
+  width: 100px;
+}
+.footer__copyright {
+  color: white;
+}
+
+* {
+  font-family: "Montserrat", sans-serif;
+  color: #ff6060;
+}
+
+a {
+  text-decoration: none;
 }
 
 .home {
@@ -109,23 +135,6 @@
 .rental details summary h3 {
   color: white;
   font-size: 18px;
-}
-
-.footer {
-  background-color: black;
-  padding: 3rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.footer p {
-  color: white;
-}
-
-.footer__logo {
-  width: 100px;
 }
 
 /*# sourceMappingURL=index.css.map */

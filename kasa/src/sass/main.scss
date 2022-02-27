@@ -1,15 +1,12 @@
+@use 'components/header.scss';
+@use 'components/footer.scss';
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 * {
   font-family: 'Montserrat', sans-serif;
   color: #ff6060;
 }
-.header {
-  margin: 1rem;
-  display: flex;
-  justify-content: space-between;
-}
-.header__logo {
-  width: 145px;
+a {
+  text-decoration: none;
 }
 .home {
   margin: 1rem;
@@ -90,18 +87,4 @@
 .rental details summary h3 {
   color: white;
   font-size: 18px;
-}
-.footer {
-  background-color: black;
-  padding: 3rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.footer p {
-  color: white;
-}
-.footer__logo {
-  width: 100px;
 }

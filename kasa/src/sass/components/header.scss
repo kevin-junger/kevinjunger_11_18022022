@@ -1,0 +1,17 @@
+.header {
+  margin: 1rem;
+  display: flex;
+  justify-content: space-between;
+
+  &__logo {
+    width: 145px;
+  }
+  &__links li {
+    display: inline;
+    font-size: 12px;
+    text-transform: uppercase;
+    &:first-child {
+      margin-right: 0.5rem;
+    }
+  }
+}
