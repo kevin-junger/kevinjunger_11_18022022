@@ -1,0 +1,10 @@
+@use '../components/hero.scss';
+@use '../components/rentals.scss';
+.home {
+  margin: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+.home > * {
+  width: 100%;
+}

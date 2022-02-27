@@ -1,4 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+* {
+  font-family: "Montserrat", sans-serif;
+  color: #ff6060;
+}
+
+a {
+  text-decoration: none;
+}
+
 .header {
   margin: 1rem;
   display: flex;
@@ -16,30 +25,68 @@
   margin-right: 0.5rem;
 }
 
-.footer {
+@media screen and (min-width: 600px) {
+  .header__links li {
+    font-size: 24px;
+    text-transform: none;
+  }
+}
+.hero {
+  margin: 0.5rem 0;
+  position: relative;
+  height: 111px;
   background-color: black;
-  padding: 3rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  opacity: 30%;
+  border-radius: 10px;
 }
-.footer__logo {
-  width: 100px;
-}
-.footer__copyright {
+.hero__text {
+  margin: 1.5rem 1rem;
   color: white;
+  font-size: 24px;
 }
 
-* {
-  font-family: "Montserrat", sans-serif;
-  color: #ff6060;
+.rentalcard {
+  position: relative;
+  margin: 0.5rem 0;
+  width: 100%;
+  height: 255px;
+  border-radius: 10px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%), #ff6060;
+}
+.rentalcard__caption {
+  position: absolute;
+  bottom: 1rem;
+  left: 1.5rem;
+}
+.rentalcard__caption--title {
+  color: white;
+  font-size: 18px;
 }
 
-a {
-  text-decoration: none;
+@media screen and (min-width: 800px) {
+  .rentalcard {
+    width: 340px;
+    height: 340px;
+    justify-self: center;
+  }
 }
-
+@media screen and (min-width: 800px) {
+  .rentals {
+    margin-top: 1rem;
+    padding: 1.5rem 1rem;
+    background-color: #f7f7f7;
+    border-radius: 25px;
+  }
+  .rentals__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .rentals__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
 .home {
   margin: 1rem;
   display: flex;
@@ -50,66 +97,32 @@ a {
   width: 100%;
 }
 
-.home__hero {
-  margin: 0.5rem 0;
-  position: relative;
-  height: 111px;
-  background-color: black;
-  opacity: 30%;
-  border-radius: 10px;
-}
-
-.home__hero h1 {
-  margin: 1.5rem 1rem;
-  color: white;
-  font-size: 24px;
-}
-
-.home__rentals {
-  margin: 0.5rem 0;
-}
-
-.home__rentals {
-  position: relative;
-  margin: 0;
-  width: 100%;
-  height: 255px;
-  border-radius: 10px;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%), #ff6060;
-}
-
-.home__rentals--title {
-  position: absolute;
-  bottom: 1rem;
-  left: 1.5rem;
-}
-
-.home__rentals--title h2 {
-  color: white;
-  font-size: 18px;
-}
-
 .rental {
   margin: 1rem;
 }
-
 .rental > * {
   width: 100%;
 }
-
-.rental h2 {
+.rental__title--name {
   font-size: 36px;
 }
-
-.rental em {
+.rental__title--location {
   font-size: 18px;
 }
-
-.rental > ul {
+.rental__host--name {
+  font-size: 18px;
+}
+.rental__host--avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 32px;
+  background-color: gray;
+}
+.rental__tags--list {
+  margin: 0;
   display: inline;
 }
-
-.rental > ul li {
+.rental__tags--tag {
   display: inline-block;
   width: 115px;
   background-color: #ff6060;
@@ -135,6 +148,21 @@ a {
 .rental details summary h3 {
   color: white;
   font-size: 18px;
+}
+
+.footer {
+  background-color: black;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.footer__logo {
+  width: 100px;
+}
+.footer__copyright {
+  color: white;
 }
 
 /*# sourceMappingURL=index.css.map */
