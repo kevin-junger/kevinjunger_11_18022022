@@ -5,7 +5,7 @@ export default function Footer() {
   return (
     <footer className="footer">
       <img className="footer__logo" src={logo} alt="logo" />
-      <p class="footer__copyright">© { date.getFullYear() } Kasa. All rights reserved.</p>
+      <p className="footer__copyright">© { date.getFullYear() } Kasa. All rights reserved.</p>
     </footer>
   )
 }
