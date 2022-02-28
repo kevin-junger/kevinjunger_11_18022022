@@ -24,7 +24,7 @@
       background-repeat: no-repeat;
       background-position: center;
       background-size: 100%;
-      background-image: url('data:image/svg+xml; utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="13px" height="20px"><path d="M0 0h24v24H0V0z" fill="none"/><path fill="white" d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>');
+      background-image: url('data:image/svg+xml; utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="50px" height="50px"><path d="M0 0h24v24H0V0z" fill="none"/><path fill="white" d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>');
       transform: rotate(90deg);
     }
   }
@@ -40,5 +40,24 @@
   &__list {
     list-style: none;
     padding-left: 0;
+  }
+}
+@media screen and (min-width: 800px) {
+  .collapsible {
+    &__summary {
+      height: 38px;
+      border-radius: 10px;
+      h3 {
+        font-size: 18px;
+      }
+      &:after {
+        margin-top: -0.5rem;
+        width: 40px;
+        height: 40px;
+      }
+    }
+    &__content {
+      font-size: 18px;
+    }
   }
 }

@@ -5,29 +5,35 @@ export default function Rental() {
   return(
     <main className="rental">
       <div className="rental__carrousel"></div>
-      <div className="rental__title">
-        <h2 className="rental__title--name">Loft cozy près du Canal Saint-Martin</h2>
-        <p className="rental__title--location">Paris, Île-de-France</p>
-      </div>
-      <div className="rental__tags">
-        <ul className="rental__tags--list">
-          <li className="rental__tags--tag">Cozy</li>
-          <li className="rental__tags--tag">Canal</li>
-          <li className="rental__tags--tag">Paris 10</li>
-        </ul>
-      </div>
-      <div className="rental__rate">
-        <ul className="rental__rate--stars">
-          <StarOn />
-          <StarOn />
-          <StarOn />
-          <StarOff />
-          <StarOff />
-        </ul>
-      </div>
-      <div className="rental__host">
-        <p className="rental__host--name">Alexandre Dumas</p>
-        <div className="rental__host--avatar"></div>
+      <div className="rental__header">
+        <div className="rental__info">
+          <div className="rental__title">
+            <h2 className="rental__title--name">Loft cozy près du Canal Saint-Martin</h2>
+            <p className="rental__title--location">Paris, Île-de-France</p>
+          </div>
+          <div className="rental__tags">
+            <ul className="rental__tags--list">
+              <li className="rental__tags--tag">Cozy</li>
+              <li className="rental__tags--tag">Canal</li>
+              <li className="rental__tags--tag">Paris 10</li>
+            </ul>
+          </div>
+        </div>
+        <div className="rental__secondary">
+          <div className="rental__rate">
+            <ul className="rental__rate--stars">
+              <StarOn />
+              <StarOn />
+              <StarOn />
+              <StarOff />
+              <StarOff />
+            </ul>
+          </div>
+          <div className="rental__host">
+            <p className="rental__host--name">Alexandre<br />Dumas</p>
+            <div className="rental__host--avatar"></div>
+          </div>
+        </div>
       </div>
       <div className="rental__collapsibles">
         <details className="collapsible">

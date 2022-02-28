@@ -10,39 +10,75 @@
     background-color: gray;
     border-radius: 10px;
   }
+  &__header {
+    display: grid;
+  }
   &__title {
     &--name {
       font-size: 18px;
+      margin-bottom: 1rem;
     }
     &--location {
       font-size: 14px;
     }
   }
+  &__tags {
+    &--list {
+      padding-left: 0;
+      display: inline;
+    }
+    &--tag {
+      display: inline-block;
+      width: 85px;
+      background-color: #ff6060;
+      border-radius: 10px;
+      color: white;
+      font-size: 12px;
+      padding: 0.35rem;
+      margin-right: 0.5rem;
+      margin-bottom: 0.5rem;
+      text-align: center;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+  &__secondary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__rate {
+    margin-top: 0.5rem;
+    &--stars {
+      padding-left: 0;
+      display: inline;
+    }
+    &--star {
+      display: inline-block;
+      margin-right: 0.25rem;
+      & > svg {
+        height: 15px;
+        width: 15px;
+      }
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
   &__host {
+    display: flex;
+    align-items: center;
     &--name {
       font-size: 12px;
+      text-align: right;
+      margin-right: 0.5rem;
     }
     &--avatar {
       width: 32px;
       height: 32px;
       border-radius: 16px;
       background-color: gray;
-    }
-  }
-  &__tags {
-    &--list {
-      margin: 0;
-      display: inline;
-    }
-    &--tag {
-      display: inline-block;
-      width: 115px;
-      background-color: #ff6060;
-      border-radius: 10px;
-      color: white;
-      font-size: 14px;
-      padding: 0.35rem;
-      text-align: center;
     }
   }
   &__collapsibles {
@@ -54,10 +90,52 @@
 @media screen and (min-width: 800px) {
   .rental {
     max-width: 771px;
+    &__carrousel {
+      height: 415px;
+    }
+    &__title {
+      &--name {
+        font-size: 36px;
+      }
+      &--location {
+        font-size: 18px;
+      }
+    }
+    &__host {
+      &--name {
+        font-size: 18px;
+        margin-right: 1rem;
+      }
+      &--avatar {
+        width: 64px;
+        height: 64px;
+        border-radius: 32px;
+      }
+    }
+    &__tags--tag {
+      width: 115px;
+      font-size: 14px;
+    }
+    &__rate--star > svg {
+      height: 30px;
+      width: 30px;
+    }
+    &__collapsibles {
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 1rem;
+    }
   }
 }
 @media screen and (min-width: 1200px) {
   .rental {
     max-width: 1171px;
+    &__header {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    &__secondary {
+      flex-direction: column-reverse;
+      justify-content: space-around;
+      align-items: flex-end;
+    }
   }
 }
