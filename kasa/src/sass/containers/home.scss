@@ -1,10 +1,21 @@
 @use '../components/hero.scss';
 @use '../components/rentals.scss';
 .home {
-  margin: 1rem;
+  margin: 0 auto;
+  max-width: 343px;
   display: flex;
   flex-wrap: wrap;
 }
 .home > * {
   width: 100%;
+}
+@media screen and (min-width: 800px) {
+  .home {
+    max-width: 771px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .home {
+    max-width: 1171px;
+  }
 }

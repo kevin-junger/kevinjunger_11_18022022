@@ -1,5 +1,6 @@
 .header {
-  margin: 1rem;
+  margin: 1.5rem auto 1rem;
+  max-width: 340px;
   display: flex;
   justify-content: space-between;
 
@@ -15,9 +16,20 @@
     }
   }
 }
-@media screen and (min-width: 600px) {
-  .header__links li {
-    font-size: 24px;
-    text-transform: none;
+@media screen and (min-width: 800px) {
+  .header {
+    max-width: 770px;
+    &__links li {
+      font-size: 24px;
+      text-transform: none;
+      &:first-child {
+        margin-right: 1rem;
+      }
+    }
+  }
+}
+@media screen and (min-width: 1200px) {
+  .header {
+    max-width: 1170px;
   }
 }
