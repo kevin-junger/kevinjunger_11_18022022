@@ -144,16 +144,41 @@ a {
 }
 .collapsible {
   background-color: #f7f7f7;
+  border-radius: 0 0 5px 5px;
 }
 .collapsible__summary {
   display: flex;
-  padding-left: 1rem;
+  justify-content: space-between;
+  height: 30px;
+  padding: 1rem 1rem 0 1rem;
+  background-color: #ff6060;
+  border-radius: 5px;
+}
+.collapsible__summary h3 {
+  margin: 0;
+  font-size: 13px;
+  color: white;
 }
 .collapsible__summary::marker, .collapsible__summary::-webkit-details-marker {
   display: none;
 }
+.collapsible__summary:after {
+  content: " ";
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  background-image: url('data:image/svg+xml; utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="13px" height="20px"><path d="M0 0h24v24H0V0z" fill="none"/><path fill="white" d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>');
+  transform: rotate(90deg);
+}
+.collapsible[open] .collapsible__summary:after {
+  transform: rotate(-90deg);
+}
 .collapsible__content {
   padding: 0 1rem 1rem;
+  font-size: 12px;
 }
 .collapsible__list {
   list-style: none;
@@ -200,6 +225,11 @@ a {
   font-size: 14px;
   padding: 0.35rem;
   text-align: center;
+}
+.rental__collapsibles {
+  margin-top: 1rem;
+  display: grid;
+  row-gap: 1rem;
 }
 
 @media screen and (min-width: 800px) {

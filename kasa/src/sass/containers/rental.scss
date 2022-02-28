@@ -45,6 +45,11 @@
       text-align: center;
     }
   }
+  &__collapsibles {
+    margin-top: 1rem;
+    display: grid;
+    row-gap: 1rem;
+  }
 }
 @media screen and (min-width: 800px) {
   .rental {

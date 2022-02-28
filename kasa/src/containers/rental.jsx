@@ -29,30 +29,32 @@ export default function Rental() {
         <p className="rental__host--name">Alexandre Dumas</p>
         <div className="rental__host--avatar"></div>
       </div>
-      <details className="rental__description collapsible">
-        <summary className="collapsible__summary">
-          <h3>Description</h3>
-        </summary>
-        <div className="collapsible__content">
-          <p>Vous serez à 50m du canal Saint-Martin où vous pourrez pique-niquer l'été et à côté de nombreux bars et restaurants. Au cœur de Paris avec 5 lignes de métro et de nombreux bus. Logement parfait pour les voyageurs en solo et les voyageurs d'affaires. Vous êtes à 1 station de la gare de l'est (7 minutes à pied).</p>
-        </div>
-      </details>
-      <details className="rental__equipments collapsible">
-        <summary className="collapsible__summary">
-          <h3>Equipements</h3>
-        </summary>
-        <div className="collapsible__content">
-          <ul className="collapsible__list">
-            <li>Climatisation</li>
-            <li>Wi-Fi</li>
-            <li>Cuisine</li>
-            <li>Espace de travail</li>
-            <li>Fer à repasser</li>
-            <li>Sèche-cheveux</li>
-            <li>Cintres</li>
-          </ul>
-        </div>
-      </details>
+      <div className="rental__collapsibles">
+        <details className="collapsible">
+          <summary className="collapsible__summary">
+            <h3>Description</h3>
+          </summary>
+          <div className="collapsible__content">
+            <p>Vous serez à 50m du canal Saint-Martin où vous pourrez pique-niquer l'été et à côté de nombreux bars et restaurants. Au cœur de Paris avec 5 lignes de métro et de nombreux bus. Logement parfait pour les voyageurs en solo et les voyageurs d'affaires. Vous êtes à 1 station de la gare de l'est (7 minutes à pied).</p>
+          </div>
+        </details>
+        <details className="collapsible">
+          <summary className="collapsible__summary">
+            <h3>Equipements</h3>
+          </summary>
+          <div className="collapsible__content">
+            <ul className="collapsible__list">
+              <li>Climatisation</li>
+              <li>Wi-Fi</li>
+              <li>Cuisine</li>
+              <li>Espace de travail</li>
+              <li>Fer à repasser</li>
+              <li>Sèche-cheveux</li>
+              <li>Cintres</li>
+            </ul>
+          </div>
+        </details>
+      </div>
     </main>
   )
 }
