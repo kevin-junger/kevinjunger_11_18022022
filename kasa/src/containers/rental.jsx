@@ -4,13 +4,10 @@ import StarOff from "../assets/starOff"
 export default function Rental() {
   return(
     <main className="rental">
+      <div className="rental__carrousel"></div>
       <div className="rental__title">
         <h2 className="rental__title--name">Loft cozy près du Canal Saint-Martin</h2>
-        <em className="rental__title--location">Paris, Île-de-France</em>
-      </div>
-      <div className="rental__host">
-        <em className="rental__host--name">Alexandre Dumas</em>
-        <div className="rental__host--avatar"></div>
+        <p className="rental__title--location">Paris, Île-de-France</p>
       </div>
       <div className="rental__tags">
         <ul className="rental__tags--list">
@@ -22,21 +19,30 @@ export default function Rental() {
       <div className="rental__rate">
         <ul className="rental__rate--stars">
           <StarOn />
+          <StarOn />
+          <StarOn />
+          <StarOff />
           <StarOff />
         </ul>
       </div>
-      <details>
-        <summary>
-          <div><h3>Description</h3></div>
+      <div className="rental__host">
+        <p className="rental__host--name">Alexandre Dumas</p>
+        <div className="rental__host--avatar"></div>
+      </div>
+      <details className="rental__description collapsible">
+        <summary className="collapsible__summary">
+          <h3>Description</h3>
         </summary>
-        <div><p>Vous serez à 50m du canal Saint-martin où vous pourrez pique-niquer l'été et à côté de nombreux bars et restaurants. Au cœur de Paris avec 5 lignes de métro et de nombreux bus. Logement parfait pour les voyageurs en solo et les voyageurs d'affaires. Vous êtes à 1 station de la gare de l'est (7 minutes à pied).</p></div>
+        <div className="collapsible__content">
+          <p>Vous serez à 50m du canal Saint-Martin où vous pourrez pique-niquer l'été et à côté de nombreux bars et restaurants. Au cœur de Paris avec 5 lignes de métro et de nombreux bus. Logement parfait pour les voyageurs en solo et les voyageurs d'affaires. Vous êtes à 1 station de la gare de l'est (7 minutes à pied).</p>
+        </div>
       </details>
-      <details>
-        <summary>
-          <div><h3>Equipements</h3></div>
+      <details className="rental__equipments collapsible">
+        <summary className="collapsible__summary">
+          <h3>Equipements</h3>
         </summary>
-        <div>
-          <ul>
+        <div className="collapsible__content">
+          <ul className="collapsible__list">
             <li>Climatisation</li>
             <li>Wi-Fi</li>
             <li>Cuisine</li>

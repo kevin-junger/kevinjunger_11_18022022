@@ -128,7 +128,6 @@ a {
   display: flex;
   flex-wrap: wrap;
 }
-
 .home > * {
   width: 100%;
 }
@@ -143,25 +142,49 @@ a {
     max-width: 1171px;
   }
 }
+.collapsible {
+  background-color: #f7f7f7;
+}
+.collapsible__summary {
+  display: flex;
+  padding-left: 1rem;
+}
+.collapsible__summary::marker, .collapsible__summary::-webkit-details-marker {
+  display: none;
+}
+.collapsible__content {
+  padding: 0 1rem 1rem;
+}
+.collapsible__list {
+  list-style: none;
+  padding-left: 0;
+}
+
 .rental {
-  margin: 1rem;
+  margin: 0 auto 2rem;
+  max-width: 343px;
 }
 .rental > * {
   width: 100%;
 }
+.rental__carrousel {
+  height: 255px;
+  background-color: gray;
+  border-radius: 10px;
+}
 .rental__title--name {
-  font-size: 36px;
+  font-size: 18px;
 }
 .rental__title--location {
-  font-size: 18px;
+  font-size: 14px;
 }
 .rental__host--name {
-  font-size: 18px;
+  font-size: 12px;
 }
 .rental__host--avatar {
-  width: 64px;
-  height: 64px;
-  border-radius: 32px;
+  width: 32px;
+  height: 32px;
+  border-radius: 16px;
   background-color: gray;
 }
 .rental__tags--list {
@@ -179,23 +202,16 @@ a {
   text-align: center;
 }
 
-.rental details summary {
-  background-color: #ff6060;
-  color: white;
-  border-radius: 10px;
-  padding: 0.5rem;
+@media screen and (min-width: 800px) {
+  .rental {
+    max-width: 771px;
+  }
 }
-
-.rental details summary::marker,
-.rental details summary::-webkit-details-marker {
-  display: none;
+@media screen and (min-width: 1200px) {
+  .rental {
+    max-width: 1171px;
+  }
 }
-
-.rental details summary h3 {
-  color: white;
-  font-size: 18px;
-}
-
 .footer {
   background-color: black;
   padding: 3rem;

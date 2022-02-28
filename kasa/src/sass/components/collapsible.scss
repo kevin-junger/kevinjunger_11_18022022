@@ -1,0 +1,17 @@
+.collapsible {
+  background-color: #f7f7f7;
+  &__summary {
+    display: flex;
+    padding-left: 1rem;
+    &::marker, &::-webkit-details-marker {
+      display: none;
+    }
+  }
+  &__content {
+    padding: 0 1rem 1rem;
+  }
+  &__list {
+    list-style: none;
+    padding-left: 0;
+  }
+}
