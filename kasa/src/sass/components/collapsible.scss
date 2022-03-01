@@ -1,4 +1,7 @@
 .collapsible {
+  &:not([open]) {
+    height: 46px
+  }
   background-color: #f7f7f7;
   border-radius: 0 0 5px 5px;
   &__summary {

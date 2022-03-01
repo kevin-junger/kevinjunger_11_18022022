@@ -76,6 +76,9 @@ main {
   background-color: #f7f7f7;
   border-radius: 0 0 5px 5px;
 }
+.collapsible:not([open]) {
+  height: 46px;
+}
 .collapsible__summary {
   display: flex;
   justify-content: space-between;
