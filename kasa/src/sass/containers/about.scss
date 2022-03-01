@@ -1,0 +1,27 @@
+.about {
+  margin: 0 auto 2rem;
+  max-width: 343px;
+  & > * {
+    width: 100%;
+  }
+  &__hero {
+    height: 223px;
+    border-radius: 25px;
+    background-color: gray;
+  }
+  &__collapsible {
+    margin-top: 1rem;
+    display: grid;
+    row-gap: 1rem;
+  }
+}
+@media screen and (min-width: 800px) {
+  .about {
+    max-width: 771px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .about {
+    max-width: 1171px;
+  }
+}

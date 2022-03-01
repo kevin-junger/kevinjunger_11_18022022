@@ -4,8 +4,10 @@ export default function Footer() {
   const date = new Date()
   return (
     <footer className="footer">
-      <img className="footer__logo" src={logo} alt="logo" />
-      <p className="footer__copyright">© { date.getFullYear() } Kasa. All rights reserved.</p>
+      <div>
+        <img className="footer__logo" src={logo} alt="logo" />
+        <p className="footer__copyright">© { date.getFullYear() } Kasa. All rights reserved.</p>
+      </div>
     </footer>
   )
 }

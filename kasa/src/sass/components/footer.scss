@@ -1,12 +1,15 @@
 .footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
   background-color: black;
-  padding: 3rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  div {
+    margin: 3rem;
+    text-align: center;
+  }
   &__logo {
     width: 100px;
+    margin: 0 auto;
   }
   &__copyright {
     color: white;

@@ -1,5 +1,8 @@
 @use 'globals.scss';
 @use 'components/header.scss';
+@use 'components/footer.scss';
+@use 'components/collapsible.scss';
 @use 'containers/home.scss';
 @use 'containers/rental.scss';
-@use 'components/footer.scss';
+@use 'containers/about.scss';
+@use 'containers/notFound.scss'

@@ -1,0 +1,40 @@
+.notfound {
+  margin: 0 auto;
+  max-width: 343px;
+  text-align: center;
+  & > * {
+    width: 100%;
+  }
+  h2 {
+    font-size: 96px;
+    margin: 6rem 0 2rem 0;
+  }
+  p {
+    font-size: 18px;
+    margin-bottom: 6rem;
+  }
+  a {
+    font-size: 14px;
+    text-decoration: underline;
+  }
+}
+@media screen and (min-width: 800px) {
+  .notfound {
+    max-width: 771px;
+    h2 {
+      font-size: 288px;
+      margin: 4rem 0 2rem 0;
+    }
+    p {
+      font-size: 36px;
+    }
+    a {
+      font-size: 18px;
+    }
+  }
+}
+@media screen and (min-width: 1200px) {
+  .notfound {
+    max-width: 1171px;
+  }
+}
