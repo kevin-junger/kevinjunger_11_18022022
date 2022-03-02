@@ -1,49 +1,26 @@
-import StarOn from "../assets/starOn"
-import StarOff from "../assets/starOff"
+import Carrousel from "../components/carrousel"
+import Title from "../components/title"
+import Tags from "../components/tags"
+import Rate from "../components/rate"
+import Host from "../components/host"
+import Collapsible from "../components/collapsible"
 
 export default function Rental() {
   return(
     <main className="rental">
-      <div className="rental__carrousel"></div>
+      <Carrousel />
       <div className="rental__header">
         <div className="rental__info">
-          <div className="rental__title">
-            <h2 className="rental__title--name">Loft cozy près du Canal Saint-Martin</h2>
-            <p className="rental__title--location">Paris, Île-de-France</p>
-          </div>
-          <div className="rental__tags">
-            <ul className="rental__tags--list">
-              <li className="rental__tags--tag">Cozy</li>
-              <li className="rental__tags--tag">Canal</li>
-              <li className="rental__tags--tag">Paris 10</li>
-            </ul>
-          </div>
+          <Title />
+          <Tags />
         </div>
         <div className="rental__secondary">
-          <div className="rental__rate">
-            <ul className="rental__rate--stars">
-              <StarOn />
-              <StarOn />
-              <StarOn />
-              <StarOff />
-              <StarOff />
-            </ul>
-          </div>
-          <div className="rental__host">
-            <p className="rental__host--name">Alexandre<br />Dumas</p>
-            <div className="rental__host--avatar"></div>
-          </div>
+          <Rate />
+          <Host />
         </div>
       </div>
       <div className="rental__collapsibles">
-        <details className="collapsible">
-          <summary className="collapsible__summary">
-            <h3>Description</h3>
-          </summary>
-          <div className="collapsible__content">
-            <p>Vous serez à 50m du canal Saint-Martin où vous pourrez pique-niquer l'été et à côté de nombreux bars et restaurants. Au cœur de Paris avec 5 lignes de métro et de nombreux bus. Logement parfait pour les voyageurs en solo et les voyageurs d'affaires. Vous êtes à 1 station de la gare de l'est (7 minutes à pied).</p>
-          </div>
-        </details>
+        <Collapsible />
         <details className="collapsible">
           <summary className="collapsible__summary">
             <h3>Equipements</h3>
