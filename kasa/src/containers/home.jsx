@@ -1,6 +1,8 @@
 import RentalCard from "../components/rentalCard"
 
-export default function Home() {
+export default function Home(props) {
+  const data = props.rentals
+  
   return(
     <main className="home">
       <section className="hero">
@@ -8,10 +10,9 @@ export default function Home() {
       </section>
       <section className="rentals">
       <div className="rentals__grid">
-        <RentalCard />
-        <RentalCard />
-        <RentalCard />
-        <RentalCard />
+        {data.map((rental) => (
+          <RentalCard key={rental.id} title={rental.title} id={rental.id} />
+        ))}
       </div>
     </section>
     </main>
