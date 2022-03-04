@@ -29,7 +29,7 @@ export default function Rental(props) {
           <Rate />
           <div className="rental__host">
             <p className="rental__host--name">{rental.host.name}</p>
-            <div className="rental__host--avatar"></div>
+            <img src={rental.host.picture} alt={rental.host.name} className="rental__host--avatar" />
           </div>
         </div>
       </div>
