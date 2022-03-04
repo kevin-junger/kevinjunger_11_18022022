@@ -5,7 +5,7 @@ import {
 } from "react"
 import {
   Routes,
-  Route,
+  Route
 } from "react-router-dom"
 import Header from "./components/header"
 import Footer from "./components/footer"
@@ -23,7 +23,7 @@ export default function App() {
     fetch('./rentals.json')
     .then((response) => {
       if(!response.ok) {
-        throw new Error(`Erreur HTTP - ${response.status}`)
+        throw new Error(response.status)
       }
       return response.json()
     })

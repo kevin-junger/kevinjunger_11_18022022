@@ -1,7 +1,11 @@
+import hero from "../assets/about.jpg"
+
 export default function About() {
   return(
     <main className="about">
-      <div className="about__hero"></div>
+      <div className="about__hero">
+        <img src={hero} alt="" />
+      </div>
       <div className="about__collapsible">
         <details className="collapsible">
           <summary className="collapsible__summary">
