@@ -10,7 +10,7 @@ export default function Rental(props) {
 
   return(
     <main className="rental">
-      <Carrousel />
+      <Carrousel gallery={rental.pictures} />
       <div className="rental__header">
         <div className="rental__info">
           <div className="rental__title">
