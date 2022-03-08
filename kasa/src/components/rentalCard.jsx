@@ -6,11 +6,13 @@ export default function RentalCard(props) {
   const cover = props.cover
 
   return(
-    <figure className="rentalcard">
-      <img src={cover} alt={title} className="rentalcard__cover" />
-      <figcaption className="rentalcard__caption">
-        <Link to={`/${id}`}><h2 className="rentalcard__caption--title">{title}</h2></Link>
-      </figcaption>
-    </figure>
+    <Link to={`/${id}`}>
+      <figure className="rentalcard">
+        <img src={cover} alt={title} className="rentalcard__cover" />
+        <figcaption className="rentalcard__caption">
+          <h2 className="rentalcard__caption--title">{title}</h2>
+        </figcaption>
+      </figure>
+    </Link>
   )
 }
