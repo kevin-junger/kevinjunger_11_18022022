@@ -7,7 +7,12 @@
   &__hero {
     height: 223px;
     border-radius: 25px;
-    background-color: gray;
+    overflow: hidden;
+    img {
+      max-height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
   }
   &__collapsible {
     margin-top: 1rem;

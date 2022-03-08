@@ -1,65 +1,47 @@
-import StarOn from "../assets/starOn"
-import StarOff from "../assets/starOff"
+import { useParams } from "react-router-dom"
+import Carrousel from "../components/carrousel"
+import Rate from "../components/rate"
+import Collapsible from "../components/collapsible"
 
-export default function Rental() {
+export default function Rental(props) {
+  const data = props.rentals
+  const params = useParams()
+  const rental = data.find((rental) => rental.id === params.rentalId)
+
   return(
     <main className="rental">
-      <div className="rental__carrousel"></div>
+      <Carrousel gallery={rental.pictures} />
       <div className="rental__header">
         <div className="rental__info">
           <div className="rental__title">
-            <h2 className="rental__title--name">Loft cozy près du Canal Saint-Martin</h2>
-            <p className="rental__title--location">Paris, Île-de-France</p>
+            <h2 className="rental__title--name">{rental.title}</h2>
+            <p className="rental__title--location">{rental.location}</p>
           </div>
           <div className="rental__tags">
             <ul className="rental__tags--list">
-              <li className="rental__tags--tag">Cozy</li>
-              <li className="rental__tags--tag">Canal</li>
-              <li className="rental__tags--tag">Paris 10</li>
+              {rental.tags.map((tag) => (
+                <li key={`${rental.id}-${tag}`} className="rental__tags--tag">{tag}</li>
+              ))}
             </ul>
           </div>
         </div>
         <div className="rental__secondary">
-          <div className="rental__rate">
-            <ul className="rental__rate--stars">
-              <StarOn />
-              <StarOn />
-              <StarOn />
-              <StarOff />
-              <StarOff />
-            </ul>
-          </div>
+          <Rate />
           <div className="rental__host">
-            <p className="rental__host--name">Alexandre<br />Dumas</p>
-            <div className="rental__host--avatar"></div>
+            <p className="rental__host--name">{rental.host.name}</p>
+            <img src={rental.host.picture} alt={rental.host.name} className="rental__host--avatar" />
           </div>
         </div>
       </div>
       <div className="rental__collapsibles">
-        <details className="collapsible">
-          <summary className="collapsible__summary">
-            <h3>Description</h3>
-          </summary>
-          <div className="collapsible__content">
-            <p>Vous serez à 50m du canal Saint-Martin où vous pourrez pique-niquer l'été et à côté de nombreux bars et restaurants. Au cœur de Paris avec 5 lignes de métro et de nombreux bus. Logement parfait pour les voyageurs en solo et les voyageurs d'affaires. Vous êtes à 1 station de la gare de l'est (7 minutes à pied).</p>
-          </div>
-        </details>
-        <details className="collapsible">
-          <summary className="collapsible__summary">
-            <h3>Equipements</h3>
-          </summary>
-          <div className="collapsible__content">
+        <Collapsible summary="Description" content={<p>{rental.description}</p>} />
+        <Collapsible summary="Equipement" content={
             <ul className="collapsible__list">
-              <li>Climatisation</li>
-              <li>Wi-Fi</li>
-              <li>Cuisine</li>
-              <li>Espace de travail</li>
-              <li>Fer à repasser</li>
-              <li>Sèche-cheveux</li>
-              <li>Cintres</li>
+              {rental.equipments.map((equipment) => (
+                <li key={`${rental.id}-${equipment}`}>{equipment}</li>
+              ))}
             </ul>
-          </div>
-        </details>
+          } />
       </div>
     </main>
   )
