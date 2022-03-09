@@ -7,12 +7,17 @@
   &__logo {
     width: 145px;
   }
-  &__links li {
-    display: inline;
-    font-size: 12px;
-    text-transform: uppercase;
-    &:first-child {
-      margin-right: 0.5rem;
+  &__links {
+    &--underline {
+      text-decoration: underline;
+    }
+    li {
+      display: inline;
+      font-size: 12px;
+      text-transform: uppercase;
+      &:first-child {
+        margin-right: 0.5rem;
+      }
     }
   }
 }

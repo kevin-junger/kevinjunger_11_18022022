@@ -26,6 +26,9 @@ main {
 .header__logo {
   width: 145px;
 }
+.header__links--underline {
+  text-decoration: underline;
+}
 .header__links li {
   display: inline;
   font-size: 12px;
