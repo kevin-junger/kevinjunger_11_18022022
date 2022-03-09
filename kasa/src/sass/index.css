@@ -26,6 +26,12 @@ main {
 .header__logo {
   width: 145px;
 }
+.header__nav {
+  margin-top: 0.5rem;
+}
+.header__links--underline {
+  text-decoration: underline;
+}
 .header__links li {
   display: inline;
   font-size: 12px;
@@ -105,6 +111,7 @@ main {
   background-size: 100%;
   background-image: url('data:image/svg+xml; utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="50px" height="50px"><path d="M0 0h24v24H0V0z" fill="none"/><path fill="white" d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>');
   transform: rotate(90deg);
+  cursor: pointer;
 }
 .collapsible[open] .collapsible__summary:after {
   transform: rotate(-90deg);
@@ -182,14 +189,15 @@ main {
 .rentalcard {
   position: relative;
   margin: 0;
-  width: 100%;
+  max-width: 343px;
   height: 255px;
   border-radius: 10px;
   overflow: hidden;
   background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%), #ff6060;
 }
 .rentalcard__cover {
-  max-height: 100%;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
   object-position: center;
 }
@@ -274,23 +282,19 @@ main {
   border-radius: 10px;
   overflow: hidden;
 }
-.rental__carrousel::before, .rental__carrousel::after {
+.rental__carrousel--btn {
   position: absolute;
   top: 112.5px;
-  content: " ";
   width: 30px;
   height: 30px;
   display: inline-block;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 100%;
-  background-image: url('data:image/svg+xml; utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="50px" height="50px"><path d="M0 0h24v24H0V0z" fill="none"/><path fill="white" d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>');
+  cursor: pointer;
 }
-.rental__carrousel::before {
+.rental__carrousel #left {
   left: 1rem;
   transform: rotate(-180deg);
 }
-.rental__carrousel::after {
+.rental__carrousel #right {
   right: 1rem;
 }
 .rental__carrousel--image {
@@ -304,6 +308,7 @@ main {
   bottom: 2rem;
   left: 50%;
   right: 50%;
+  text-shadow: 1px 1px 5px black;
 }
 .rental__header {
   display: grid;
@@ -384,7 +389,7 @@ main {
   .rental__carrousel {
     height: 415px;
   }
-  .rental__carrousel::before, .rental__carrousel::after {
+  .rental__carrousel #left, .rental__carrousel #right {
     top: 187.5px;
     width: 40px;
     height: 40px;

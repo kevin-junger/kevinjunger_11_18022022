@@ -3,16 +3,23 @@
   max-width: 340px;
   display: flex;
   justify-content: space-between;
-
   &__logo {
     width: 145px;
   }
-  &__links li {
-    display: inline;
-    font-size: 12px;
-    text-transform: uppercase;
-    &:first-child {
-      margin-right: 0.5rem;
+  &__nav {
+    margin-top: 0.5rem;
+  }
+  &__links {
+    &--underline {
+      text-decoration: underline;
+    }
+    li {
+      display: inline;
+      font-size: 12px;
+      text-transform: uppercase;
+      &:first-child {
+        margin-right: 0.5rem;
+      }
     }
   }
 }
