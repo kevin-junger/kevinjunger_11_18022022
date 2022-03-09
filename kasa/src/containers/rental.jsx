@@ -26,7 +26,7 @@ export default function Rental(props) {
           </div>
         </div>
         <div className="rental__secondary">
-          <Rate />
+          <Rate rating={rental.rating}/>
           <div className="rental__host">
             <p className="rental__host--name">{rental.host.name}</p>
             <img src={rental.host.picture} alt={rental.host.name} className="rental__host--avatar" />

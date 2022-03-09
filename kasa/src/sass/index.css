@@ -301,6 +301,7 @@ main {
   bottom: 2rem;
   left: 50%;
   right: 50%;
+  text-shadow: 1px 1px 5px black;
 }
 .rental__header {
   display: grid;
