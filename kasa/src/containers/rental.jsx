@@ -16,7 +16,7 @@ export default function Rental(props) {
   return rental !== undefined ? (
     <main className="rental">
       <Carrousel gallery={rental.pictures} />
-      <section className="rental__header">
+      <div className="rental__header">
         <section className="rental__about">
           <Info title={rental.title} location={rental.location} />
           <Tags id={rental.id} tags={rental.tags} />
@@ -25,11 +25,11 @@ export default function Rental(props) {
           <Rate rating={rental.rating} />
           <Host host={rental.host} />
         </aside>
-      </section>
-      <section className="rental__collapsibles">
+      </div>
+      <div className="rental__collapsibles">
         <Collapsible id='' summary="Description" contentType="text" content={rental.description} />
         <Collapsible id={rental.id} summary="Equipement" contentType="list" content={rental.equipments} />
-      </section>
+      </div>
     </main>
   ) : (
     <NotFound />
