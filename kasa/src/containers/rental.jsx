@@ -12,6 +12,7 @@ export default function Rental(props) {
   const { rentalId } = useParams()
   const rental = data.find((rental) => rental.id === rentalId)
 
+  //if rental is undefined (which means rentalId doesn't match), notFound is displayed instead
   return rental !== undefined ? (
     <main className="rental">
       <Carrousel gallery={rental.pictures} />

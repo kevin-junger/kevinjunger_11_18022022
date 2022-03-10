@@ -14,6 +14,8 @@ import Header from "./components/header"
 import Footer from "./components/footer"
 
 export default function App() {
+  // fetching the JSON and updating the states accordingly
+
   const [data, setData] = useState(null)
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(null)
