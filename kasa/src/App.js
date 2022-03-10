@@ -44,8 +44,8 @@ export default function App() {
       {error && <p>${error}</p>}
       {data && 
         <Routes>
-          <Route path="/" element={<Home rentals={data} />} />
-          <Route path=":rentalId" element={<Rental rentals={data} />} />
+          <Route path="/" element={<Home data={data} />} />
+          <Route path=":rentalId" element={<Rental data={data} />} />
           <Route path="/about" element={<About />} />
         </Routes>
       }

@@ -1,8 +1,23 @@
+// site-wide stuff
 @use 'globals.scss';
 @use 'components/header.scss';
 @use 'components/footer.scss';
-@use 'components/collapsible.scss';
+
+// home container & components
 @use 'containers/home.scss';
+@use 'components/hero.scss';
+@use 'components/rentals.scss';
+@use 'components/card.scss';
+
+// rental container & components
 @use 'containers/rental.scss';
+@use 'components/carrousel.scss';
+@use 'components/collapsible.scss';
+@use 'components/info.scss';
+@use 'components/tags.scss';
+@use 'components/rate.scss';
+@use 'components/host.scss';
+
+// about & 404 (a.k.a. not found)
 @use 'containers/about.scss';
 @use 'containers/notFound.scss'

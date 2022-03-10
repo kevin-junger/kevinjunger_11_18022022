@@ -17,9 +17,9 @@ export default function Rate(props) {
   }
 
   return(
-    <div className="rental__rate">
-      <ul className="rental__rate--stars">
-        {starArray.map((star) => <li key={starArray.indexOf(star)}className="rental__rate--star">{star}</li>)}
+    <div className="rate">
+      <ul className="rate__stars">
+        {starArray.map((star) => <li key={starArray.indexOf(star)}className="rate__star">{star}</li>)}
       </ul>
     </div>
   )

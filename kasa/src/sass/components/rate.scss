@@ -1,0 +1,24 @@
+.rate {
+  margin-top: 0.5rem;
+  &__stars {
+    padding-left: 0;
+    display: inline;
+  }
+  &__star {
+    display: inline-block;
+    margin-right: 0.25rem;
+    & > svg {
+      height: 15px;
+      width: 15px;
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+@media screen and (min-width: 800px) {
+  .rate__star > svg {
+    height: 30px;
+    width: 30px;
+  }
+}

@@ -1,0 +1,28 @@
+.host {
+  display: flex;
+  align-items: center;
+  &__name {
+    font-size: 12px;
+    text-align: right;
+    margin-right: 0.5rem;
+  }
+  &__avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 16px;
+    background-color: gray;
+  }
+}
+@media screen and (min-width: 800px) {
+  .host {
+    &__name {
+      font-size: 18px;
+      margin-right: 1rem;
+    }
+    &__avatar {
+      width: 64px;
+      height: 64px;
+      border-radius: 32px;
+    }
+  }
+}
