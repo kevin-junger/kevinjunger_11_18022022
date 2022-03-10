@@ -30,9 +30,18 @@ Développer en React (avec l'aide de _Create React App_) avec un découpage en c
 
 ## Instructions
 
-> Pré-requis : nodejs, npm et git
+> Note : les instructions données ci-dessous sont rédigées pour un système sous Ubuntu (ou autre distribution sur base Debian). Pour les autres UNIX et Windows, certaines commandes peuvent varier, et dans le cas de Windows, il convient en outre de vérifier les variables d'environnement. Alternativement, et cela est vivement conseillé, utilisez WSL 2 pour émuler Linux sous Windows.
 
-> Note : les instructions données ci-dessous sont rédigées pour les systèmes UNIX (Linux, macOS, BSD...). Pour Windows, certaines commandes peuvent varier, et il convient en outre de vérifier les variables d'environnement. Alternativement, et cela est vivement conseillé, utilisez WSL 2 pour émuler Linux sous Windows.
+0. Installer, si ce n'est pas déjà fait, `nodejs`, `npm` et `git` sur votre machine, installer `n` via `npm` en global, et mettre à jour `nodejs` et `npm` grâce à `n`
+
+```bash
+~$ sudo apt update
+~$ sudo apt install nodejs npm git
+~$ sudo npm i -g n
+~$ sudo n latest
+```
+
+> Il est conseillé de relancer une nouvelle instance de votre terminal après avoir mis à jour `nodejs` et `npm`
 
 1. Cloner le dépôt sur votre machine
 
@@ -61,3 +70,14 @@ Développer en React (avec l'aide de _Create React App_) avec un découpage en c
 > Si votre navigateur ne s'est pas ouvert automatiquement, veuillez vous rendre à l'adresse [http://localhost:3000](http://localhost:3000).
 
 > Pour plus de détails (notamment pour le lancement de tests unitaires ou la création d'une _build_ de production), veuillez consulter le README fourni par _Create React App_ dans le dossier `kasa`.
+
+5. (Bonus) Compiler les fichiers Sass et "autopréfixage"
+
+> On part du principe que vous vous situez déjà dans `kasa`.
+
+```bash
+~$ npm run sass
+~$ npm run prefix
+```
+
+> Les chemins sont déjà en place dans `package.json`, mais vous pouvez les modifier si vous le souhaitez.
