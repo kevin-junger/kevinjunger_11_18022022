@@ -9,7 +9,7 @@ import {
 } from "react-router-dom"
 import Home from "./containers/home"
 import About from "./containers/about"
-import Rental from "./containers/rental"
+import Wrapper from "./containers/wrapper"
 import Header from "./components/header"
 import Footer from "./components/footer"
 
@@ -47,7 +47,7 @@ export default function App() {
       {data && 
         <Routes>
           <Route path="/" element={<Home data={data} />} />
-          <Route path=":rentalId" element={<Rental data={data} />} />
+          <Route path=":rentalId" element={<Wrapper data={data} />} />
           <Route path="/about" element={<About />} />
         </Routes>
       }
