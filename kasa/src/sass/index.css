@@ -255,6 +255,7 @@ main {
   overflow: hidden;
 }
 .carrousel__btn {
+  padding-bottom: 1.4rem;
   position: absolute;
   top: 112.5px;
   width: 30px;
@@ -286,6 +287,9 @@ main {
 @media screen and (min-width: 800px) {
   .carrousel {
     height: 415px;
+  }
+  .carrousel__btn {
+    padding-bottom: 0.7rem;
   }
   .carrousel #left, .carrousel #right {
     top: 187.5px;

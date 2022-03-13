@@ -5,6 +5,7 @@
   border-radius: 10px;
   overflow: hidden;
   &__btn {
+    padding-bottom: 1.4rem;
     position: absolute;
     top: calc((255px / 2) - 15px);
     width: 30px;
@@ -36,6 +37,9 @@
 @media screen and (min-width: 800px) {
   .carrousel {
     height: 415px;
+    &__btn {
+      padding-bottom: 0.7rem;
+    }
     #left, #right {
       top: calc((415px / 2) - 20px);
       width: 40px;
